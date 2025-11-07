@@ -1922,6 +1922,19 @@ components:
       description: ''
       type: object
       properties:
+        partners:
+          type: array
+          items:
+            $ref: '#/components/schemas/VTCPartnership'
+        pending_requests_count:
+          type: integer
+          description: Returns the number of pending VTC requests requiring action.
+      required:
+        - partners
+    VTCPartnership:
+      description: ''
+      type: object
+      properties:
         id:
           type: number
           description: The ID of the VTC partnership.
@@ -1935,18 +1948,15 @@ components:
           type: string
           description: The timestamp the VTC partnership was last updated at. This will be due to the status changing.
         sender:
-          type: array
+          type: object
           items:
             $ref: '#/components/schemas/VTC'
           description: Returns a VTC object for the VTC that sent the request.
         receiver:
-          type: array
+          type: object
           items:
             $ref: '#/components/schemas/VTC'
           description: Returns a VTC object for the VTC that received the request.
-        pending_requests_count:
-          type: integer
-          description: Returns the number of pending VTC requests requiring action.
       required:
         - id
         - status
@@ -1987,4 +1997,3 @@ tags:
   - name: Events
   - name: Virtual Trucking Companies
   - name: Game Information
-  
