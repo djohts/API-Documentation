@@ -1928,7 +1928,7 @@ components:
             $ref: '#/components/schemas/VTCPartnership'
         pending_requests_count:
           type: integer
-          description: Returns the number of pending VTC partnership requests requiring action.
+          description: Amount of pending VTC partnership requests involving the VTC.
       required:
         - partners
     VTCPartnership:
