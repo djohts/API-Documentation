@@ -921,16 +921,16 @@ components:
           type: object
           required:
             - isStaff
-            - isUpperStaff
+            - isManagement
             - isGameAdmin
             - showDetailedOnWebMaps
           properties:
             isStaff:
               type: boolean
               description: If the user is a TruckersMP staff member
-            isUpperStaff:
+            isManagement:
               type: boolean
-              description: If the user is part of upper staff within the TruckersMP team
+              description: If the user is part of management within the TruckersMP team
             isGameAdmin:
               type: boolean
               description: If the user has Game Moderator permissions
